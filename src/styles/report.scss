@@ -1,0 +1,326 @@
+// SVG Chart configs
+$configs: (
+  report-submenu__stat-chart-one:
+    (
+      svgSize: 76px,
+      percentage: 75,
+      strokeWidth: 4px,
+      backgroundColor: #444656,
+      foregroundColor: #2195f1,
+      labelColor: #2195f1,
+      labelFontSize: 22px,
+      duration: 2s,
+      animationDelay: 1s
+    ),
+  report-submenu__stat-chart-two:
+    (
+      svgSize: 76px,
+      percentage: 35,
+      strokeWidth: 4px,
+      backgroundColor: #444656,
+      foregroundColor: #2195f1,
+      labelColor: #2195f1,
+      labelFontSize: 22px,
+      duration: 2s,
+      animationDelay: 1s
+    ),
+  report-submenu__stat-chart-three:
+    (
+      svgSize: 76px,
+      percentage: 62,
+      strokeWidth: 4px,
+      backgroundColor: #444656,
+      foregroundColor: #2195f1,
+      labelColor: #2195f1,
+      labelFontSize: 22px,
+      duration: 2s,
+      animationDelay: 1s
+    )
+);
+// SVG Chart code Start
+$pi: 3.14;
+$labelData: '';
+@for $i from 0 to 101 {
+  $labelData: $labelData + $i + '%' + '\a';
+}
+@each $chart, $param in $configs {
+  $c: (map-get($param, svgSize) - map-get($param, strokeWidth)) * $pi;
+  $cOffSet: (map-get($param, percentage) / 100) * $c;
+  .#{$chart} {
+    width: map-get($param, svgSize);
+    height: map-get($param, svgSize);
+    margin: 0;
+    position: relative;
+    &.animate {
+      svg .circle-foreground {
+        animation: offset map-get($param, duration) ease-in-out forwards;
+        animation-delay: map-get($param, animationDelay);
+      }
+      figcaption:after {
+        animation: #{$chart}-label
+          map-get($param, duration)
+          steps(map-get($param, percentage))
+          forwards;
+        animation-delay: map-get($param, animationDelay);
+      }
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      .circle-background {
+        r: (map-get($param, svgSize) - map-get($param, strokeWidth))/2;
+        cx: 50%;
+        cy: 50%;
+        fill: none;
+        stroke: map-get($param, backgroundColor);
+        stroke-width: map-get($param, strokeWidth);
+      }
+      .circle-foreground {
+        @extend .circle-background;
+        stroke: map-get($param, foregroundColor);
+        stroke-dasharray: $cOffSet $c;
+        stroke-dashoffset: $cOffSet;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+      }
+    }
+    figcaption {
+      display: inline-block;
+      width: 100%;
+      height: map-get($param, labelFontSize);
+      overflow: hidden;
+      text-align: center;
+      color: map-get($param, labelColor);
+      position: absolute;
+      top: calc(50% - #{map-get($param, labelFontSize) / 2});
+      left: 0;
+      font-size: 0;
+      &:after {
+        display: inline-block;
+        content: $labelData;
+        white-space: pre;
+        font-size: map-get($param, labelFontSize);
+        font-family: 'Montserrat';
+        line-height: map-get($param, labelFontSize);
+      }
+    }
+  }
+  @keyframes #{$chart}-label {
+    100% {
+      transform: translateY(
+        map-get($param, labelFontSize) * (-(map-get($param, percentage)))
+      );
+    }
+  }
+}
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+// SVG Chart code End
+.report {
+  &-container {
+    width: calc(100% - 95px);
+    background-color: #2b2d3c;
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+  }
+  &-submenu {
+    display: flex;
+    margin-top: 40px;
+    margin-right: 15px;
+    margin-bottom: 100px;
+    margin-left: 60px;
+    justify-content: space-between;
+    @media (max-width: 1250px) {
+      flex-direction: column-reverse;
+      margin-left: 15px;
+    }
+    @media (max-width: 700px) {
+      margin-bottom: 30px;
+    }
+    &__filter {
+      @media (max-width: 1250px) {
+        align-self: flex-end;
+      }
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+    &__filter-content {
+      top: 60px;
+      background-color: #2b2d3c;
+      @media (max-width: 1250px) {
+        left: 72px;
+        right: unset;
+        top: 45px;
+      }
+    }
+    &__filter-option {
+      &:hover {
+        color: white;
+      }
+    }
+    &__stats {
+      display: flex;
+      @media (max-width: 1250px) {
+        margin-top: 50px;
+      }
+      @media (max-width: 980px) {
+        width: 100%;
+        justify-content: space-between;
+      }
+      @media (max-width: 760px) {
+        flex-direction: column;
+      }
+      @media (max-width: 400px) {
+        margin: 0 auto;
+        width: auto;
+      }
+    }
+    &__stat {
+      display: flex;
+      margin-right: 80px;
+      @media (max-width: 980px) {
+        margin-right: 0;
+      }
+      @media (max-width: 760px) {
+        margin-bottom: 30px;
+      }
+      &-chart {
+        margin-right: 22px;
+      }
+      &-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'Montserrat';
+      }
+      &-number {
+        font-weight: 700;
+        color: white;
+        font-size: 22px;
+      }
+      &-label {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #8f93a4;
+      }
+    }
+  }
+  &-chart {
+    display: flex;
+    background: url('../images/report-chart.jpg') no-repeat center;
+    min-height: 420px;
+    @media (max-width: 460px) {
+      display: none;
+    }
+    &__day {
+      width: 14.348%;
+      padding-top: 380px;
+      border-right: 1px solid #3d4048;
+      color: #797d8d;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      &_active {
+        color: white;
+      }
+    }
+  }
+  &-table {
+    &__wr {
+      overflow-x: auto;
+    }
+    &__content {
+      min-width: 100%;
+      font-size: 16px;
+    }
+    &__header {
+      background-color: #3a3e52;
+      color: #73778a;
+      text-align: left;
+      &_active {
+        color: white;
+      }
+      &-item {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 100px;
+        position: relative;
+      }
+      &-title {
+        position: relative;
+        &:before {
+          position: absolute;
+          top: 1px;
+          right: -25px;
+          width: 10px;
+          height: 10px;
+          content: '';
+          transform: rotate(-45deg);
+          border-bottom: 2px solid #73778a;
+          border-left: 2px solid #73778a;
+          background: transparent;
+        }
+        &_active {
+          color: white;
+          &:before {
+            top: 8px;
+            border-bottom-color: white;
+            border-left-color: white;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+    &__row {
+      color: white;
+      border-bottom: 1px solid #363948;
+      & > td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        white-space: nowrap;
+        padding-right: 30px;
+      }
+    }
+    &__cell-status {
+      position: relative;
+      padding-left: 25px;
+      &:before {
+        position: absolute;
+        z-index: 2;
+        top: 24px;
+        left: 0px;
+        width: 12px;
+        height: 12px;
+        content: '';
+        border-radius: 50%;
+        background-color: #f44336;
+      }
+      &_active {
+        &:before {
+          position: absolute;
+          z-index: 2;
+          top: 24px;
+          left: 0px;
+          width: 12px;
+          height: 12px;
+          content: '';
+          border-radius: 50%;
+          background-color: #4caf50;
+        }
+      }
+    }
+    &__first-cell {
+      padding-left: 60px;
+      @media (max-width: 500px) {
+        padding-left: 20px;
+      }
+    }
+  }
+}

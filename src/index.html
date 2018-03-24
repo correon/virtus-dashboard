@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav-btn">
+      <div class="header__nav-btn-middle"></div>
+    </div>
+    <div class="header__logo">
+      <a class="header__logo-wrapper" href="#">
+        <img class="header__logo-img" src="images/virtus-logo.png" alt="">
+      </a>
+    </div>
+    <div class="header__buttons-wrapper">
+      <button class="header__add-btn header_margin-right">
+        <span class="header__add-btn-text">Add</span>
+        <span class="header__add-btn-sign">+</span>
+      </button>
+
+      <form class="header__form header_margin-right" id="header-search">
+        <input class="header__form-input" type="search" placeholder="Search">
+      </form>
+
+      <button class="header__notify-btn header__notify-btn_active header_margin-right">
+        <i class="far fa-bell fw"></i>
+      </button>
+
+      <div class="header__profile-dropdown dropdown" data-dropdown="profile">
+        <div class="header__profile-btn dropdown__btn">
+          <div class="header__profile-btn-img">
+            <img src="images/user-pic.png" class="img-responsive" alt="">
+          </div>
+        </div>
+        <ul tabindex="-1" class="header__profile-dropdown-container dropdown__list">
+          <li class="header__profile-dropdown-option">Profile</li>
+          <li class="header__profile-dropdown-option">Edit</li>
+          <li class="header__profile-dropdown-option">Help</li>
+          <li class="header__profile-dropdown-option">Quit</li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+  <div class="content-wrapper">
+    <nav class="nav">
+      <ul>
+        <li class="nav__item">
+          <a href="#" class="nav__icon nav__icon-home">
+            <i class="fas fa-home fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="projects.html" class="nav__icon nav__icon-menu">
+            <i class="fas fa-briefcase fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="report.html" class="nav__icon nav__icon-report">
+            <i class="fas fa-chart-line fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__icon nav__icon-inbox nav__icon-inbox_new nav__icon-inbox_active">
+            <i class="fas fa-envelope fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item" id="chat-btn">
+          <button class="nav__icon nav__icon-chats">
+            <i class="fas fa-comment"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="inbox-container">
+      <div class="submenu">
+        <div class="submenu__buttons">
+          <button class="submenu__button submenu__button_active">
+            <i class="fas fa-inbox fw submenu__button_margin"></i> Inbox (
+            <span id="inbox-count">2</span>)
+          </button>
+          <button class="submenu__button">
+            <i class="fab fa-telegram-plane fw submenu__button_margin"></i> Sent
+          </button>
+          <button class="submenu__button">
+            <i class="fas fa-trash submenu__button_margin"></i> Trash
+          </button>
+        </div>
+        <div class="submenu__filter">
+          <span class="submenu__filter-label">Filter messages:</span>
+          <div class="submenu__filter-container dropdown select" data-dropdown="inbox-filter">
+            <button class="submenu__filter-btn dropdown__btn">
+              Not selected
+            </button>
+            <ul class="submenu__filter-content dropdown__list">
+              <li class="submenu__filter-option">Date</li>
+              <li class="submenu__filter-option">Tag</li>
+              <li class="submenu__filter-option">Unread</li>
+              <li class="submenu__filter-option">Sender</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="inbox">
+        <div class="inbox__dialogues-container">
+          <div class="inbox__dialogues">
+            <div class="inbox__dialogue">
+              <div class="inbox__dialogue-info">
+                <div class="inbox__dialogue-user">
+                  <div class="inbox__dialogue-user-img">
+                    <img src="images/chat-avatar-2.png" alt="" class="img-responsive">
+                  </div>
+                  <span class="inbox__dialogue-user-text">Michelle Stewart</span>
+                </div>
+                <span class="inbox__dialogue-message-date">
+                  Today, 5:32 PM
+                </span>
+              </div>
+              <p class="inbox__dialogue-message">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm.
+              </p>
+            </div>
+
+            <div class="inbox__dialogue">
+              <div class="inbox__dialogue-info">
+                <div class="inbox__dialogue-user">
+                  <div class="inbox__dialogue-user-img">
+                    <img src="images/chat-avatar-1.png" alt="" class="img-responsive">
+                  </div>
+                  <span class="inbox__dialogue-user-text">Jolene Slater</span>
+                </div>
+                <span class="inbox__dialogue-message-date">
+                  10 April
+                </span>
+              </div>
+              <p class="inbox__dialogue-message">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+              </p>
+            </div>
+
+            <div class="inbox__dialogue inbox__dialogue_active">
+              <div class="inbox__dialogue-info">
+                <div class="inbox__dialogue-user">
+                  <div class="inbox__dialogue-user-img">
+                    <img src="images/chat-avatar-2.png" alt="" class="img-responsive">
+                  </div>
+                  <span class="inbox__dialogue-user-text">Lyall Roach</span>
+                </div>
+                <span class="inbox__dialogue-message-date inbox__dialogue-message-date_read">
+                  8 April
+                </span>
+              </div>
+              <p class="inbox__dialogue-message">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+
+            <div class="inbox__dialogue">
+              <div class="inbox__dialogue-info">
+                <div class="inbox__dialogue-user">
+                  <div class="inbox__dialogue-user-img">
+                    <img src="images/chat-avatar-4.png" alt="" class="img-responsive">
+                  </div>
+                  <span class="inbox__dialogue-user-text">Dominic Lynton</span>
+                </div>
+                <span class="inbox__dialogue-message-date inbox__dialogue-message-date_read">
+                  2 April
+                </span>
+              </div>
+              <p class="inbox__dialogue-message">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+              </p>
+            </div>
+
+            <div class="inbox__dialogue">
+              <div class="inbox__dialogue-info">
+                <div class="inbox__dialogue-user">
+                  <div class="inbox__dialogue-user-img">
+                    <img src="images/chat-avatar-4.png" alt="" class="img-responsive">
+                  </div>
+                  <span class="inbox__dialogue-user-text">Dominic Lynton</span>
+                </div>
+                <span class="inbox__dialogue-message-date inbox__dialogue-message-date_read">
+                  2 April
+                </span>
+              </div>
+              <p class="inbox__dialogue-message">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+              </p>
+            </div>
+
+            <div class="inbox__dialogue">
+              <div class="inbox__dialogue-info">
+                <div class="inbox__dialogue-user">
+                  <div class="inbox__dialogue-user-img">
+                    <img src="images/chat-avatar-4.png" alt="" class="img-responsive">
+                  </div>
+                  <span class="inbox__dialogue-user-text">Dominic Lynton</span>
+                </div>
+                <span class="inbox__dialogue-message-date inbox__dialogue-message-date_read">
+                  2 April
+                </span>
+              </div>
+              <p class="inbox__dialogue-message">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+              </p>
+            </div>
+
+          </div>
+          <div class="inbox__dialogues-btn-wrapper">
+            <button class="inbox__dialogues-btn">
+              <span class="inbox__dialogues-btn-sign">+</span>
+              <span class="inbox__dialogues-btn-text">New conversation</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="inbox__messages">
+          <div class="inbox__messages-container">
+            <div class="inbox__messages-message">
+              <div class="inbox__messages-message-container">
+                <div class="inbox__messages-avatar">
+                  <img class="img-responsive" src="images/msg-sender-pic.png" alt="">
+                </div>
+                <div class="inbox__messages-text">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ulla pariatur.
+                </div>
+              </div>
+              <div class="inbox__messages-date">
+                4 April 2016, 5:32 PM
+              </div>
+            </div>
+
+            <div class="inbox__messages-message inbox__messages_right">
+              <div class="inbox__messages-message-container">
+                <div class="inbox__messages-text">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                </div>
+                <div class="inbox__messages-avatar">
+                  <img class="img-responsive" src="images/user-pic.png" alt="">
+                </div>
+              </div>
+              <div class="inbox__messages-date inbox__messages-date_right">
+                4 April 2016, 5:32 PM
+              </div>
+            </div>
+
+            <div class="inbox__messages-message">
+              <div class="inbox__messages-message-container">
+                <div class="inbox__messages-avatar">
+                  <img class="img-responsive" src="images/msg-sender-pic.png" alt="">
+                </div>
+                <div class="inbox__messages-text">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ulla pariatur.
+                </div>
+              </div>
+              <div class="inbox__messages-date">
+                4 April 2016, 5:32 PM
+              </div>
+            </div>
+
+            <div class="inbox__messages-message inbox__messages_right">
+              <div class="inbox__messages-message-container">
+                <div class="inbox__messages-text">
+                  Ut enim ad minim veniam,ex ea commo!
+                </div>
+                <div class="inbox__messages-avatar">
+                  <img class="img-responsive" src="images/user-pic.png" alt="">
+                </div>
+              </div>
+              <div class="inbox__messages-date">
+                4 April 2016, 5:32 PM
+              </div>
+            </div>
+
+            <div class="inbox__messages-message inbox__messages_right">
+              <div class="inbox__messages-message-container">
+                <div class="inbox__messages-text">
+                  Ut enim ad minim
+                </div>
+                <div class="inbox__messages-avatar">
+                  <img class="img-responsive" src="images/user-pic.png" alt="">
+                </div>
+              </div>
+              <div class="inbox__messages-date">
+                4 April 2016, 5:32 PM
+              </div>
+            </div>
+          </div>
+
+          <div class="inbox__messages-input-wrapper">
+            <div class="inbox__messages-input-container">
+              <textarea class="inbox__messages-input" placeholder="Write a message" name="message" cols="30" rows="10"></textarea>
+              <i class="fas fa-paperclip fw inbox__messages-input-icon"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="inbox__profile">
+          <div class="inbox__profile-img">
+            <img class="img-responsive" src="images/inbox-profile.png" alt="">
+          </div>
+          <span class="inbox__profile-name">Lyall Roach</span>
+          <span class="inbox__profile-profession">UX/UI Designer</span>
+          <p class="inbox__profile-about">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmoc tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad
+          </p>
+          <div class="inbox__profile-contacts">
+            <div class="inbox__profile-contact">
+              <span class="inbox__profile-contact-label">Email</span>
+              <span class="inbox__profile-contact-text inbox__profile-contact-email" title="lyallroach@gmail.com">lyallroach@gmail.com</span>
+            </div>
+            <div class="inbox__profile-contact">
+              <span class="inbox__profile-contact-label">Phone</span>
+              <span class="inbox__profile-contact-text">+48 500 400 300</span>
+            </div>
+            <div class="inbox__profile-contact">
+              <span class="inbox__profile-contact-label">Address</span>
+              <span class="inbox__profile-contact-text">65 Lorem St, Warsaw, PL</span>
+            </div>
+            <div class="inbox__profile-contact">
+              <span class="inbox__profile-contact-label">Organization</span>
+              <span class="inbox__profile-contact-text">Symu.co</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

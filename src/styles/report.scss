@@ -220,7 +220,10 @@ $labelData: '';
     }
     &__day {
       width: 14.348%;
-      padding-top: 380px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
       border-right: 1px solid #3d4048;
       color: #797d8d;
       text-align: center;

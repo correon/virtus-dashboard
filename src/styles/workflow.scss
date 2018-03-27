@@ -1,0 +1,16 @@
+.workflow-wr {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 95px);
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.workflow-container {
+  display: flex;
+  background-color: #2b2d3b;
+  width: 100%;
+  min-height: calc(100vh - 191px);
+  padding: 25px;
+}

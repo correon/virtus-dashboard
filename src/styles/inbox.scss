@@ -1,10 +1,16 @@
 .inbox-container {
   display: flex;
 
-  width: 100%;
+  width: calc(100% - 95px);
 
   flex-wrap: wrap;
   align-content: flex-start;
+
+  background-color: #2f3242;
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .submenu {
@@ -149,7 +155,6 @@
 
     width: 29.38%;
     height: 100%;
-    min-height: calc(100vh - 96px - 96px);
 
     background-color: #2b2d3c;
     box-shadow: 5px 0 80px 0 rgba(0, 0, 0, 0.3);
@@ -285,8 +290,6 @@
     width: 52.74%;
     padding-top: 35px;
 
-    background-color: #2f3242;
-
     flex-grow: 1;
 
     &.hide {
@@ -296,11 +299,15 @@
     &-avatar {
       overflow: hidden;
 
+      flex-shrink: 0;
+
       width: 56px;
       height: 56px;
       margin-right: 20px;
+      margin-bottom: 28px;
 
       align-self: flex-end;
+      border-radius: 50%;
     }
 
     &-container {
@@ -328,12 +335,12 @@
 
     &-message {
       display: flex;
-      flex-direction: column;
 
       margin-bottom: 55px;
 
       &-container {
         display: flex;
+        flex-direction: column;
       }
     }
 
@@ -354,13 +361,12 @@
       font-size: 14px;
 
       margin-top: 10px;
-      margin-left: 76px;
 
       color: #797d8d;
     }
 
     &_right {
-      align-items: flex-end;
+      justify-content: flex-end;
 
       .inbox__messages-text {
         border-radius: 10px;
@@ -374,8 +380,7 @@
       }
 
       .inbox__messages-date {
-        margin-right: 76px;
-        margin-left: 0;
+        text-align: end;
       }
     }
 

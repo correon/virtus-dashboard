@@ -1,6 +1,7 @@
 .projects-wr {
   display: flex;
   flex-direction: column;
+  background-color: #2b2d3b;
   width: calc(100% - 95px);
   @media (max-width: 700px) {
     width: 100%;
@@ -8,58 +9,68 @@
 }
 
 .projects__container {
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  background-color: #2b2d3b;
   width: 100%;
   min-height: calc(100vh - 191px);
-  padding: 25px;
+  padding-top: 55px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 60px;
 }
 
 .projects {
-  overflow-y: hidden;
   width: 100%;
-  background-color: #3a3e52;
   border-radius: 5px;
-  padding-left: 40px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  // padding-left: 40px;
+  // padding-top: 25px;
+  // padding-bottom: 25px;
   &__header {
     display: flex;
-    width: 1665px;
+    min-width: 1740px;
+    margin-bottom: 20px;
+    padding-left: 55px;
     color: #969bac;
     &-title {
-      width: 220px;
+      width: 13%;
     }
     &-value {
-      width: 160px;
+      width: 9.763%;
     }
     &-deadline {
-      width: 210px;
+      width: 12.426%;
     }
     &-time-spent {
-      width: 190px;
+      width: 11.834%;
     }
     &-progress {
-      width: 390px;
+      width: 23%;
     }
     &-status {
-      width: 195px;
+      width: 11.538%;
     }
     &__assigned {
-      width: 310px;
+      width: 15.384%;
     }
   }
 }
 
 .project {
-  width: 1665px;
+  min-width: 1740px;
   display: flex;
   align-items: center;
+  margin-bottom: 25px;
   padding-top: 25px;
+  padding-left: 50px;
   padding-bottom: 25px;
   background-color: #3a3e52;
   color: white;
+  border-left: 6px solid #2195f2;
+  border-radius: 4px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   &__top-text {
     font-size: 16px;
     margin-bottom: 5px;
@@ -71,29 +82,35 @@
   &__title {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    //width: 220px;
+    width: 13%;
   }
   &__value {
-    width: 160px;
+    //width: 160px;
+    width: 9.763%;
   }
   &__deadline {
     display: flex;
     flex-direction: column;
-    width: 210px;
+    //width: 210px;
+    width: 12.426%;
   }
   &__time-spent {
-    width: 190px;
+    //width: 190px;
+    width: 11.834%;
   }
   &__progress {
     display: flex;
     align-items: center;
-    width: 390px;
+    //width: 390px;
+    width: 23%;
     &-label {
       margin-right: 15px;
     }
     &-bar {
       position: relative;
-      width: 235px;
+      //width: 235px;
+      width: 61.54%;
       height: 8px;
       border-radius: 4px;
       background-color: #585c70;
@@ -107,11 +124,13 @@
     }
   }
   &__status {
-    width: 195px;
+    //width: 195px;
+    width: 11.538%;
   }
   &__assigned {
     display: flex;
-    width: 250px;
+    //width: 250px;
+    width: 15.384%;
     &-avatar {
       overflow: hidden;
       width: 42px;
@@ -125,6 +144,7 @@
     }
   }
   &__btn {
+    //width: 3.254%;
     display: flex;
     align-items: center;
     height: 20px;

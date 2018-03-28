@@ -1,22 +1,3 @@
-//Полифил для closest с mdn
-(function(ELEMENT) {
-  ELEMENT.matches =
-    ELEMENT.matches ||
-    ELEMENT.mozMatchesSelector ||
-    ELEMENT.msMatchesSelector ||
-    ELEMENT.oMatchesSelector ||
-    ELEMENT.webkitMatchesSelector;
-  ELEMENT.closest =
-    ELEMENT.closest ||
-    function closest(selector) {
-      if (!this) return null;
-      if (this.matches(selector)) return this;
-      if (!this.parentElement) {
-        return null;
-      } else return this.parentElement.closest(selector);
-    };
-})(Element.prototype);
-
 document.querySelector('body').addEventListener('click', function(event) {
   //при клике на нижнюю иконку навигации(под почтой) - скрываем сообщения и профиль, показываем
   //на весь экран список чатов, и наоборот
@@ -26,7 +7,9 @@ document.querySelector('body').addEventListener('click', function(event) {
       .classList.toggle('show');
     document.querySelector('.inbox__messages').classList.toggle('hide');
     document.querySelector('.inbox__profile').classList.toggle('hide');
-      document.querySelector('.nav__icon-chats').classList.toggle('nav__icon_active');
+    document
+      .querySelector('.nav__icon-chats')
+      .classList.toggle('nav__icon_active');
   }
 
   //выезжающее боковое меню гамбургер
@@ -43,6 +26,19 @@ document.querySelector('body').addEventListener('click', function(event) {
   ) {
     document.querySelector('.nav').classList.remove('active');
     document.querySelector('.header__nav-btn').classList.remove('active');
+  }
+
+  //обработка модалок
+  let isModalBtnClicked = event.target.closest('[data-modal="btn"]');
+  let modal = document.querySelector('.modal');
+
+  if (isModalBtnClicked) {
+    modal.classList.add('modal_active');
+  } else if (
+    !event.target.closest('.modal-container') ||
+    event.target.closest('.modal__list-item')
+  ) {
+    modal.classList.remove('modal_active');
   }
 
   //тут обработка всех дропдаунов

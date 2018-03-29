@@ -2,15 +2,120 @@
   display: flex;
   flex-direction: column;
   width: calc(100% - 95px);
+  background-color: #2b2d3b;
   @media (max-width: 700px) {
     width: 100%;
   }
 }
 
 .workflow-container {
+  overflow-y: auto;
   display: flex;
-  background-color: #2b2d3b;
   width: 100%;
   min-height: calc(100vh - 191px);
-  padding: 25px;
+  padding-top: 55px;
+  padding-left: 55px;
+}
+
+.desks {
+  display: flex;
+}
+
+.desk {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  &__header {
+    margin-bottom: 30px;
+    font-size: 14px;
+    position: relative;
+    &:after {
+      position: absolute;
+      z-index: 2;
+      top: 20px;
+      left: 245px;
+      width: 9px;
+      height: 9px;
+      content: '';
+      transform: rotate(225deg);
+      border-bottom: 2px solid #969bac;
+      border-left: 2px solid #969bac;
+      background: transparent;
+    }
+    &-title {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 5px;
+    }
+    &-info {
+      display: flex;
+    }
+    &-project {
+      position: relative;
+      margin-right: 20px;
+      color: #969bac;
+      &:after {
+        position: absolute;
+        z-index: 2;
+        top: 7px;
+        right: -12px;
+        width: 4px;
+        height: 4px;
+        content: '';
+        border-radius: 50%;
+        background-color: #969bac;
+      }
+    }
+    &-price {
+      color: #1786ea;
+    }
+  }
+  &__project {
+    display: flex;
+    width: 290px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a3e52;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 22px;
+    &-left {
+      display: flex;
+    }
+    &-assignee {
+      flex-shrink: 0;
+      overflow: hidden;
+      width: 42px;
+      height: 42px;
+      margin-right: 25px;
+      border-radius: 50%;
+    }
+    &-info {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+    &-title {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: white;
+    }
+    &-description {
+      color: #969bac;
+    }
+    &-company {
+      position: relative;
+      margin-right: 20px;
+      &:after {
+        position: absolute;
+        z-index: 2;
+        top: 7px;
+        right: -14px;
+        width: 4px;
+        height: 4px;
+        content: '';
+        border-radius: 50%;
+        background-color: #969bac;
+      }
+    }
+  }
 }

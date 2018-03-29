@@ -1,14 +1,14 @@
 .projects-wr {
   display: flex;
   flex-direction: column;
-  background-color: #2b2d3b;
   width: calc(100% - 95px);
+  background-color: #2b2d3b;
   @media (max-width: 700px) {
     width: 100%;
   }
 }
 
-.projects__container {
+.projects-container {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -23,9 +23,6 @@
 .projects {
   width: 100%;
   border-radius: 5px;
-  // padding-left: 40px;
-  // padding-top: 25px;
-  // padding-bottom: 25px;
   &__header {
     display: flex;
     min-width: 1740px;
@@ -70,6 +67,12 @@
   border-radius: 4px;
   &:last-child {
     margin-bottom: 0;
+  }
+  &_queued {
+    border-left-color: #e2e3e8;
+  }
+  &_completed {
+    border-left-color: #4caf50;
   }
   &__top-text {
     font-size: 16px;

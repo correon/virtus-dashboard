@@ -49,7 +49,7 @@ a {
 
   display: flex;
 
-  min-height: 100vh;
+  min-height: calc(100vh - 96px);
 }
 
 .dropdown.active {
@@ -83,7 +83,9 @@ a {
   left: 0;
   background-color: rgba(51, 51, 51, 0.5);
   &_active {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &-container {
     display: flex;
@@ -91,9 +93,6 @@ a {
     width: 400px;
     flex-direction: column;
     align-items: center;
-    top: 220px;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     background-color: #2b2d3b;
     padding: 0 40px 25px 40px;

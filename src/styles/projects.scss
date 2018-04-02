@@ -14,18 +14,14 @@
   flex-direction: column;
   width: 100%;
   min-height: calc(100vh - 191px);
-  padding-top: 55px;
-  padding-right: 25px;
-  padding-bottom: 30px;
-  padding-left: 60px;
 }
 
 .projects {
-  width: 100%;
+  min-width: 1740px;
+  padding: 55px 25px 30px 60px;
   border-radius: 5px;
   &__header {
     display: flex;
-    min-width: 1740px;
     margin-bottom: 20px;
     padding-left: 55px;
     color: #969bac;
@@ -54,7 +50,6 @@
 }
 
 .project {
-  min-width: 1740px;
   display: flex;
   align-items: center;
   margin-bottom: 25px;

@@ -196,10 +196,13 @@
     }
     &-dates {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       height: 335px;
       background-color: #2f3242;
       padding: 45px 40px 40px 40px;
+      &-wr {
+        display: flex;
+      }
       @media (max-width: 1400px) {
         padding-left: 25px;
         padding-right: 25px;
@@ -208,10 +211,15 @@
         padding: 45px 40px 40px 40px;
       }
     }
-    &-day {
+    &-days {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin-bottom: 15px;
+    }
+    &-day {
+      width: 14.285%;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
       font-size: 14px;
       text-transform: uppercase;
       color: #969bac;
@@ -220,16 +228,24 @@
       }
     }
     &-date {
-      margin-bottom: 15px;
-      font-size: 16px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 28px;
-      &:last-child {
-        margin-bottom: 0;
+      &-wr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        width: 14.285%;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: white;
+        position: relative;
+        z-index: 2;
+        min-width: 28px;
+        height: 28px;
       }
       &_active {
         border-radius: 50%;
@@ -237,6 +253,9 @@
       }
       &_disabled {
         color: #969bac;
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

@@ -35,8 +35,9 @@ document.querySelector('body').addEventListener('click', function(event) {
   if (isModalBtnClicked) {
     modal.classList.add('modal_active');
   } else if (
-    !event.target.closest('.modal-container') ||
-    event.target.closest('.modal__list-item')
+    modal &&
+    (!event.target.closest('.modal-container') ||
+      event.target.closest('.modal__list-item'))
   ) {
     modal.classList.remove('modal_active');
   }

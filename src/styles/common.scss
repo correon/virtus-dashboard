@@ -94,9 +94,13 @@ a {
     flex-direction: column;
     align-items: center;
     color: white;
-    background-color: #2b2d3b;
+    background-color: #282a3a;
     padding: 0 40px 25px 40px;
     text-align: center;
+    @media (max-width: 460px) {
+      width: 280px;
+      padding: 0 20px 10px 20px;
+    }
   }
   &__title {
     margin-bottom: 40px;

@@ -10,7 +10,7 @@ class Dashboard {
     //при клике на нижнюю иконку навигации(под почтой) - скрываем сообщения и профиль,
     //показываем на весь экран список чатов, и наоборот
     this.body.addEventListener('click', event => {
-      if (event.target === document.querySelector('.fa-comment')) {
+      if (event.target.closest('.fa-comment')) {
         document
           .querySelector('.inbox__dialogues-container')
           .classList.toggle('show');
@@ -26,7 +26,7 @@ class Dashboard {
   handleSlidingMenuClick() {
     //выезжающее боковое меню гамбургер
     this.body.addEventListener('click', event => {
-      if (event.target === this.navigationBtn) {
+      if (event.target.closest('.header__nav-btn')) {
         this.navigation.classList.toggle('active');
         this.navigationBtn.classList.toggle('active');
       } else if (
@@ -80,4 +80,6 @@ class Dashboard {
   }
 }
 
-new Dashboard();
+document.addEventListener('DOMContentLoaded', event => {
+  new Dashboard();
+});

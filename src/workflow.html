@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav-btn">
+      <div class="header__nav-btn-middle"></div>
+    </div>
+    <div class="header__logo">
+      <a class="header__logo-wrapper" href="#">
+        <img class="header__logo-img" src="images/virtus-logo.png" alt="">
+      </a>
+    </div>
+    <div class="header__buttons-wrapper">
+      <button class="header__add-btn header_margin-right">
+        <span class="header__add-btn-text">Add</span>
+        <span class="header__add-btn-sign">+</span>
+      </button>
+
+      <form class="header__form header_margin-right" id="header-search">
+        <input class="header__form-input" type="search" placeholder="Search">
+      </form>
+
+      <button class="header__notify-btn header__notify-btn_active header_margin-right">
+        <i class="far fa-bell fw"></i>
+      </button>
+
+      <div class="header__profile-dropdown dropdown" data-dropdown="profile">
+        <div class="header__profile-btn dropdown__btn">
+          <div class="header__profile-btn-img">
+            <img src="images/user-pic.png" class="img-responsive" alt="">
+          </div>
+        </div>
+        <ul tabindex="-1" class="header__profile-dropdown-container dropdown__list">
+          <li class="header__profile-dropdown-option">Profile</li>
+          <li class="header__profile-dropdown-option">Edit</li>
+          <li class="header__profile-dropdown-option">Help</li>
+          <li class="header__profile-dropdown-option">Quit</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <nav class="nav">
+      <ul>
+        <li class="nav__item">
+          <a href="home.html" class="nav__icon nav__icon-home">
+            <i class="fas fa-home fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__icon nav__icon-menu nav__icon_active">
+            <i class="fas fa-briefcase fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="report.html" class="nav__icon nav__icon-report">
+            <i class="fas fa-chart-line fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__icon nav__icon-inbox nav__icon-inbox_new">
+            <i class="fas fa-envelope fa-fw"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="workflow-wr">
+      <div class="submenu">
+        <div class="submenu__buttons ">
+          <a href="projects.html" class="submenu__button">
+            All Projects (358)
+          </a>
+          <a href="#" class="submenu__button submenu__button_active">
+            Workflow
+          </a>
+        </div>
+        <div class="submenu__filter ">
+          <span class="submenu__filter-label ">Filter messages:</span>
+          <div class="submenu__filter-container dropdown select " data-dropdown="inbox-filter ">
+            <button class="submenu__filter-btn dropdown__btn ">
+              Not selected
+            </button>
+            <ul class="submenu__filter-content dropdown__list ">
+              <li class="submenu__filter-option ">Date</li>
+              <li class="submenu__filter-option ">Tag</li>
+              <li class="submenu__filter-option ">Unread</li>
+              <li class="submenu__filter-option ">Sender</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="workflow-container">
+        <div class="desks">
+          <div class="desk">
+            <div class="desk__header">
+              <div class="desk__header-title">Queued</div>
+              <div class="desk__header-info">
+                <span class="desk__header-project">1 project</span>
+                <span class="desk__header-price">$1500</span>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="desk">
+            <div class="desk__header">
+              <div class="desk__header-title">Planning</div>
+              <div class="desk__header-info">
+                <span class="desk__header-project">4 projects</span>
+                <span class="desk__header-price">$4100</span>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-4.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">New website</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Dashboard</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-1.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Mobile app</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="desk">
+            <div class="desk__header">
+              <div class="desk__header-title">Design</div>
+              <div class="desk__header-info">
+                <span class="desk__header-project">4 projects</span>
+                <span class="desk__header-price">$5200</span>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-4.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">New website</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Dashboard</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-1.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Mobile app</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="desk">
+            <div class="desk__header">
+              <div class="desk__header-title">Development</div>
+              <div class="desk__header-info">
+                <span class="desk__header-project">3 projects</span>
+                <span class="desk__header-price">$4200</span>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-4.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">New website</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Dashboard</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="desk">
+            <div class="desk__header">
+              <div class="desk__header-title">Testing</div>
+              <div class="desk__header-info">
+                <span class="desk__header-project">1 project</span>
+                <span class="desk__header-price">$1500</span>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="desk">
+            <div class="desk__header">
+              <div class="desk__header-title">Completed</div>
+              <div class="desk__header-info">
+                <span class="desk__header-project">3 projects</span>
+                <span class="desk__header-price">$3700</span>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-4.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">New website</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Dashboard</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-container">
+      <h2 class="modal__title">Edit Workflow</h2>
+      <ul class="modal__list">
+        <li class="modal__list-item">Desk</li>
+        <li class="modal__list-item">Project</li>
+        <li class="modal__list-item">Price</li>
+        <li class="modal__list-item">Company</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js "></script>
+</body>

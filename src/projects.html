@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav-btn">
+      <div class="header__nav-btn-middle"></div>
+    </div>
+    <div class="header__logo">
+      <a class="header__logo-wrapper" href="#">
+        <img class="header__logo-img" src="images/virtus-logo.png" alt="">
+      </a>
+    </div>
+    <div class="header__buttons-wrapper">
+      <button class="header__add-btn header_margin-right">
+        <span class="header__add-btn-text">Add</span>
+        <span class="header__add-btn-sign">+</span>
+      </button>
+
+      <form class="header__form header_margin-right" id="header-search">
+        <input class="header__form-input" type="search" placeholder="Search">
+      </form>
+
+      <button class="header__notify-btn header__notify-btn_active header_margin-right">
+        <i class="far fa-bell fw"></i>
+      </button>
+
+      <div class="header__profile-dropdown dropdown" data-dropdown="profile">
+        <div class="header__profile-btn dropdown__btn">
+          <div class="header__profile-btn-img">
+            <img src="images/user-pic.png" class="img-responsive" alt="">
+          </div>
+        </div>
+        <ul tabindex="-1" class="header__profile-dropdown-container dropdown__list">
+          <li class="header__profile-dropdown-option">Profile</li>
+          <li class="header__profile-dropdown-option">Edit</li>
+          <li class="header__profile-dropdown-option">Help</li>
+          <li class="header__profile-dropdown-option">Quit</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <nav class="nav">
+      <ul>
+        <li class="nav__item">
+          <a href="home.html" class="nav__icon nav__icon-home">
+            <i class="fas fa-home fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__icon nav__icon-menu nav__icon_active">
+            <i class="fas fa-briefcase fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="report.html" class="nav__icon nav__icon-report">
+            <i class="fas fa-chart-line fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__icon nav__icon-inbox nav__icon-inbox_new">
+            <i class="fas fa-envelope fa-fw"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="projects-wr">
+      <div class="submenu">
+        <div class="submenu__buttons ">
+          <a href="#" class="submenu__button submenu__button_active ">
+            All Projects (358)
+          </a>
+          <a href="workflow.html" class="submenu__button ">
+            Workflow
+          </a>
+        </div>
+        <div class="submenu__filter ">
+          <span class="submenu__filter-label ">Filter messages:</span>
+          <div class="submenu__filter-container dropdown select " data-dropdown="inbox-filter ">
+            <button class="submenu__filter-btn dropdown__btn ">
+              Not selected
+            </button>
+            <ul class="submenu__filter-content dropdown__list ">
+              <li class="submenu__filter-option ">Date</li>
+              <li class="submenu__filter-option ">Tag</li>
+              <li class="submenu__filter-option ">Unread</li>
+              <li class="submenu__filter-option ">Sender</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="projects-container">
+        <div class="projects">
+          <div class="projects__header">
+            <div class="projects__header-title ">Project title</div>
+            <div class="projects__header-value ">Value</div>
+            <div class="projects__header-deadline ">Deadline</div>
+            <div class="projects__header-time-spent ">Time spent</div>
+            <div class="projects__header-progress ">Progress</div>
+            <div class="projects__header-status ">Status</div>
+            <div class="projects__header-assigned ">Assigned to</div>
+          </div>
+
+          <div class="project">
+            <div class="project__title">
+              <span class="project__top-text">New website</span>
+              <span class="project__bottom-text">Microsoft</span>
+            </div>
+
+            <div class="project__value">$2300</div>
+
+            <div class="project__deadline">
+              <span class="project__top-text">1 April 2018</span>
+              <span class="project__bottom-text">8 days left</span>
+            </div>
+
+            <div class="project__time-spent">40 hours</div>
+
+            <div class="project__progress">
+              <span class="project__progress-label">70%</span>
+              <div class="project__progress-bar">
+                <div class="project__progress-bar_active" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="project__status">Development</div>
+
+            <div class="project__assigned">
+              <div class="project__assigned-avatar">
+                <img src="images/chat-avatar-4.png" class="img-responsive" alt="">
+              </div>
+              <div class="project__assigned-info">
+                <span class="project__top-text">Dominic Lynton</span>
+                <span class="project__bottom-text">Front End Dev</span>
+              </div>
+            </div>
+
+            <div class="project__btn" data-modal="btn">
+              <div class="project__btn-middle"></div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__title">
+              <span class="project__top-text">Landing page</span>
+              <span class="project__bottom-text">Google</span>
+            </div>
+
+            <div class="project__value">$1250</div>
+
+            <div class="project__deadline">
+              <span class="project__top-text">21 May 2018</span>
+              <span class="project__bottom-text">23 days left</span>
+            </div>
+
+            <div class="project__time-spent">7 hours</div>
+
+            <div class="project__progress">
+              <span class="project__progress-label">15%</span>
+              <div class="project__progress-bar">
+                <div class="project__progress-bar_active" style="width: 15%"></div>
+              </div>
+            </div>
+
+            <div class="project__status">Planning</div>
+
+            <div class="project__assigned">
+              <div class="project__assigned-avatar">
+                <img src="images/chat-avatar-3.png" class="img-responsive" alt="">
+              </div>
+              <div class="project__assigned-info">
+                <span class="project__top-text">Lyan Roach</span>
+                <span class="project__bottom-text">UX/UI Designer</span>
+              </div>
+            </div>
+
+            <div class="project__btn" data-modal="btn">
+              <div class="project__btn-middle"></div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__title">
+              <span class="project__top-text">New dashboard</span>
+              <span class="project__bottom-text">Symu.co</span>
+            </div>
+
+            <div class="project__value">$5100</div>
+
+            <div class="project__deadline">
+              <span class="project__top-text">28 May 2018</span>
+              <span class="project__bottom-text">30 days left</span>
+            </div>
+
+            <div class="project__time-spent">56 hours</div>
+
+            <div class="project__progress">
+              <span class="project__progress-label">90%</span>
+              <div class="project__progress-bar">
+                <div class="project__progress-bar_active" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="project__status">Testing</div>
+
+            <div class="project__assigned">
+              <div class="project__assigned-avatar">
+                <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+              </div>
+              <div class="project__assigned-info">
+                <span class="project__top-text">Michelle Stewart</span>
+                <span class="project__bottom-text">Account</span>
+              </div>
+            </div>
+
+            <div class="project__btn" data-modal="btn">
+              <div class="project__btn-middle"></div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__title">
+              <span class="project__top-text">New logo</span>
+              <span class="project__bottom-text">JCD.pl</span>
+            </div>
+
+            <div class="project__value">$900</div>
+
+            <div class="project__deadline">
+              <span class="project__top-text">11 June 2018</span>
+              <span class="project__bottom-text">23 days left</span>
+            </div>
+
+            <div class="project__time-spent">10 hours</div>
+
+            <div class="project__progress">
+              <span class="project__progress-label">40%</span>
+              <div class="project__progress-bar">
+                <div class="project__progress-bar_active" style="width: 40%"></div>
+              </div>
+            </div>
+
+            <div class="project__status">Design</div>
+
+            <div class="project__assigned">
+              <div class="project__assigned-avatar">
+                <img src="images/chat-avatar-3.png" class="img-responsive" alt="">
+              </div>
+              <div class="project__assigned-info">
+                <span class="project__top-text">Lyan Roach</span>
+                <span class="project__bottom-text">UX/UI Designer</span>
+              </div>
+            </div>
+
+            <div class="project__btn" data-modal="btn">
+              <div class="project__btn-middle"></div>
+            </div>
+          </div>
+
+          <div class="project project_queued">
+            <div class="project__title">
+              <span class="project__top-text">Landing page</span>
+              <span class="project__bottom-text">Symu.co</span>
+            </div>
+
+            <div class="project__value">$1500</div>
+
+            <div class="project__deadline">
+              <span class="project__top-text">17 July 2018</span>
+              <span class="project__bottom-text">2 months left</span>
+            </div>
+
+            <div class="project__time-spent">0 hours</div>
+
+            <div class="project__progress">
+              <span class="project__progress-label">0%</span>
+              <div class="project__progress-bar">
+                <div class="project__progress-bar_active" style="width: 0"></div>
+              </div>
+            </div>
+
+            <div class="project__status">Queued</div>
+
+            <div class="project__assigned">
+              <div class="project__assigned-avatar">
+                <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+              </div>
+              <div class="project__assigned-info">
+                <span class="project__top-text">Michelle Stewart</span>
+                <span class="project__bottom-text">Account</span>
+              </div>
+            </div>
+
+            <div class="project__btn" data-modal="btn">
+              <div class="project__btn-middle"></div>
+            </div>
+          </div>
+
+          <div class="project project_completed">
+            <div class="project__title">
+              <span class="project__top-text">Mobile app</span>
+              <span class="project__bottom-text">Facebook</span>
+            </div>
+
+            <div class="project__value">$4300</div>
+
+            <div class="project__deadline">
+              <span class="project__top-text">5 August 2018</span>
+              <span class="project__bottom-text">Completed</span>
+            </div>
+
+            <div class="project__time-spent">59 hours</div>
+
+            <div class="project__progress">
+              <span class="project__progress-label">100%</span>
+              <div class="project__progress-bar">
+                <div class="project__progress-bar_active" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div class="project__status">Completed</div>
+
+            <div class="project__assigned">
+              <div class="project__assigned-avatar">
+                <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+              </div>
+              <div class="project__assigned-info">
+                <span class="project__top-text">Michelle Stewart</span>
+                <span class="project__bottom-text">Account</span>
+              </div>
+            </div>
+
+            <div class="project__btn" data-modal="btn">
+              <div class="project__btn-middle"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-container">
+      <h2 class="modal__title">Edit Project</h2>
+      <ul class="modal__list">
+        <li class="modal__list-item">Title</li>
+        <li class="modal__list-item">Value</li>
+        <li class="modal__list-item">Deadline</li>
+        <li class="modal__list-item">Progress</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js "></script>
+</body>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav-btn">
+      <div class="header__nav-btn-middle"></div>
+    </div>
+    <div class="header__logo">
+      <a class="header__logo-wrapper" href="#">
+        <img class="header__logo-img" src="images/virtus-logo.png" alt="">
+      </a>
+    </div>
+    <div class="header__buttons-wrapper">
+      <button class="header__add-btn header_margin-right">
+        <span class="header__add-btn-text">Add</span>
+        <span class="header__add-btn-sign">+</span>
+      </button>
+
+      <form class="header__form header_margin-right" id="header-search">
+        <input class="header__form-input" type="search" placeholder="Search">
+      </form>
+
+      <button class="header__notify-btn header__notify-btn_active header_margin-right">
+        <i class="far fa-bell fw"></i>
+      </button>
+
+      <div class="header__profile-dropdown dropdown" data-dropdown="profile">
+        <div class="header__profile-btn dropdown__btn">
+          <div class="header__profile-btn-img">
+            <img src="images/user-pic.png" class="img-responsive" alt="">
+          </div>
+        </div>
+        <ul tabindex="-1" class="header__profile-dropdown-container dropdown__list">
+          <li class="header__profile-dropdown-option">Profile</li>
+          <li class="header__profile-dropdown-option">Edit</li>
+          <li class="header__profile-dropdown-option">Help</li>
+          <li class="header__profile-dropdown-option">Quit</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <nav class="nav">
+      <ul>
+        <li class="nav__item">
+          <a href="#" class="nav__icon nav__icon-home nav__icon_active">
+            <i class="fas fa-home fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="projects.html" class="nav__icon nav__icon-menu">
+            <i class="fas fa-briefcase fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="report.html" class="nav__icon nav__icon-report">
+            <i class="fas fa-chart-line fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__icon nav__icon-inbox nav__icon-inbox_new">
+            <i class="fas fa-envelope fa-fw"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="home-container">
+      <div class="home-container__left">
+        <div class="home__general-report">
+          <div class="report-submenu__stats report-submenu__stats_home">
+            <div class="report-submenu__stat">
+              <figure class="report-submenu__stat-chart report-submenu__stat-chart-one animate">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="circle-background" />
+                  <circle class="circle-foreground" />
+                </svg>
+                <figcaption>75%</figcaption>
+              </figure>
+              <div class="report-submenu__stat-data">
+                <span id="views-count" class="report-submenu__stat-number">1 300</span>
+                <span class="report-submenu__stat-label">Views</span>
+              </div>
+            </div>
+
+            <div class="report-submenu__stat">
+              <figure class="report-submenu__stat-chart report-submenu__stat-chart-two animate">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="circle-background" />
+                  <circle class="circle-foreground" />
+                </svg>
+                <figcaption>35%</figcaption>
+              </figure>
+              <div class="report-submenu__stat-data">
+                <span id="views-count" class="report-submenu__stat-number">800</span>
+                <span class="report-submenu__stat-label">Visitors</span>
+              </div>
+            </div>
+
+            <div class="report-submenu__stat">
+              <figure class="report-submenu__stat-chart report-submenu__stat-chart-three animate">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="circle-background" />
+                  <circle class="circle-foreground" />
+                </svg>
+                <figcaption>62%</figcaption>
+              </figure>
+              <div class="report-submenu__stat-data">
+                <span id="views-count" class="report-submenu__stat-number">3 800</span>
+                <span class="report-submenu__stat-label">Impressions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home__general-report-chart">
+            <div class="report-chart__day">
+              <span>Mon</span>
+            </div>
+            <div class="report-chart__day">
+              <span>Tue</span>
+            </div>
+            <div class="report-chart__day report-chart__day_active">
+              <span>Wed</span>
+            </div>
+            <div class="report-chart__day">
+              <span>Thu</span>
+            </div>
+            <div class="report-chart__day">
+              <span>Fri</span>
+            </div>
+            <div class="report-chart__day">
+              <span>Sat</span>
+            </div>
+            <div class="report-chart__day">
+              <span>San</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="home__left-bottom-wr">
+          <div class="home__sales-report">
+            <div class="home__sales-report-top">
+              <div class="home__sales-report-title">
+                Sales report
+              </div>
+              <div class="submenu__filter report-submenu__filter home__sales-report-filter">
+                <span class="submenu__filter-label">Show:</span>
+                <div class="submenu__filter-container dropdown select" data-dropdown="inbox-filter">
+                  <button class="submenu__filter-btn dropdown__btn">
+                    Not selected
+                  </button>
+                  <ul class="submenu__filter-content report-submenu__filter-content home__report-filter-wr dropdown__list">
+                    <li class="submenu__filter-option report-submenu__filter-option">Day</li>
+                    <li class="submenu__filter-option report-submenu__filter-option">Week</li>
+                    <li class="submenu__filter-option report-submenu__filter-option">Month</li>
+                    <li class="submenu__filter-option report-submenu__filter-option">Year</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="home__sales-report-chart"></div>
+          </div>
+
+          <div class="home__inbox">
+            <div class="home__inbox-title">
+              Inbox (
+              <span class="home__inbox-count">2</span>)
+            </div>
+
+            <div class="home__inbox-dialogues">
+              <div class="inbox__dialogue inbox__dialogue_active">
+                <div class="inbox__dialogue-info">
+                  <div class="inbox__dialogue-user">
+                    <div class="inbox__dialogue-user-img">
+                      <img src="images/chat-avatar-2.png" alt="" class="img-responsive">
+                    </div>
+                    <span class="inbox__dialogue-user-text home__dialogue-user-text_margin">Michelle Stewart</span>
+                  </div>
+                  <span class="inbox__dialogue-message-date">
+                    Today, 5:32 PM
+                  </span>
+                </div>
+                <p class="inbox__dialogue-message">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm.
+                </p>
+              </div>
+
+              <div class="inbox__dialogue inbox__dialogue_active">
+                <div class="inbox__dialogue-info">
+                  <div class="inbox__dialogue-user">
+                    <div class="inbox__dialogue-user-img">
+                      <img src="images/chat-avatar-1.png" alt="" class="img-responsive">
+                    </div>
+                    <span class="inbox__dialogue-user-text home__dialogue-user-text_margin">Jolene Slater</span>
+                  </div>
+                  <span class="inbox__dialogue-message-date">
+                    10 April
+                  </span>
+                </div>
+                <p class="inbox__dialogue-message">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                </p>
+              </div>
+
+              <div class="inbox__dialogue">
+                <div class="inbox__dialogue-info">
+                  <div class="inbox__dialogue-user">
+                    <div class="inbox__dialogue-user-img">
+                      <img src="images/chat-avatar-2.png" alt="" class="img-responsive">
+                    </div>
+                    <span class="inbox__dialogue-user-text home__dialogue-user-text_margin">Lyall Roach</span>
+                  </div>
+                  <span class="inbox__dialogue-message-date inbox__dialogue-message-date_read">
+                    8 April
+                  </span>
+                </div>
+                <p class="inbox__dialogue-message">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
+
+              <div class="inbox__dialogue">
+                <div class="inbox__dialogue-info">
+                  <div class="inbox__dialogue-user">
+                    <div class="inbox__dialogue-user-img">
+                      <img src="images/chat-avatar-4.png" alt="" class="img-responsive">
+                    </div>
+                    <span class="inbox__dialogue-user-text home__dialogue-user-text_margin">Dominic Lynton</span>
+                  </div>
+                  <span class="inbox__dialogue-message-date inbox__dialogue-message-date_read">
+                    2 April
+                  </span>
+                </div>
+                <p class="inbox__dialogue-message">
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="home-container__right">
+        <div class="home__projects">
+          <div class="home__projects-title">Your projects</div>
+          <div class="home__projects-wr">
+            <div class="desk__project home__projects-project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Wordpress theme</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project home__projects-project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-4.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">New website</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project home__projects-project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Dashboard</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project home__projects-project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-1.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Mobile app</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+
+            <div class="desk__project home__projects-project">
+              <div class="desk__project-left">
+                <div class="desk__project-assignee">
+                  <img src="images/chat-avatar-2.png" class="img-responsive" alt="">
+                </div>
+
+                <div class="desk__project-info">
+                  <div class="desk__project-title">Dashboard</div>
+                  <div class="desk__project-description">
+                    <span class="desk__project-company">Symu.co</span>
+                    <span class="desk__project-price">$1500</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project__btn" data-modal="btn">
+                <div class="project__btn-middle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home__calendar">
+          <div class="home__calendar-month">
+            <button class="home__calendar-month-prev-btn"></button>
+            <div class="home__calendar-month-title">April</div>
+            <button class="home__calendar-month-next-btn"></button>
+          </div>
+          <div class="home__calendar-dates">
+            <div class="home__calendar-days">
+              <span class="home__calendar-day">Sun</span>
+              <span class="home__calendar-day">Mon</span>
+              <span class="home__calendar-day">Tue</span>
+              <span class="home__calendar-day">Wed</span>
+              <span class="home__calendar-day">Thu</span>
+              <span class="home__calendar-day">Fri</span>
+              <span class="home__calendar-day">Sat</span>
+            </div>
+
+            <div class="home__calendar-dates-wr">
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date home__calendar-date_disabled">28</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date home__calendar-date_disabled">29</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date home__calendar-date_disabled">30</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date home__calendar-date_disabled">31</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">1</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">2</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">3</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">4</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date home__calendar-date_active">5</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">6</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">7</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">8</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">9</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">10</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">11</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">12</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">13</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">14</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">15</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">16</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">17</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">18</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">19</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">20</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">21</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">22</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">23</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">24</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">25</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">26</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">27</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">28</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">29</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">30</span>
+              </div>
+              <div class="home__calendar-date-wr">
+                <span class="home__calendar-date">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-container">
+      <h2 class="modal__title">Edit Project</h2>
+      <ul class="modal__list">
+        <li class="modal__list-item">Title</li>
+        <li class="modal__list-item">Price</li>
+        <li class="modal__list-item">Company</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>

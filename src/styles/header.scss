@@ -1,0 +1,357 @@
+.header {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+
+  background-color: #2f3242;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 700px) {
+    justify-content: space-between;
+  }
+
+  &_margin-right {
+    margin-right: 50px;
+
+    @media (max-width: 500px) {
+      margin-right: 30px;
+    }
+  }
+
+  &__nav-btn {
+    position: relative;
+
+    display: none;
+
+    width: 34px;
+    height: 26px;
+    margin-left: 5px;
+
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 34px;
+      height: 3px;
+
+      content: '';
+      transition: transform 0.3s ease-out;
+      transform-origin: 0 0;
+
+      background-color: #fff;
+    }
+
+    &-middle {
+      width: 34px;
+      height: 3px;
+
+      transition: all 0.3s ease-out;
+      transform-origin: 0 50%;
+
+      background-color: #fff;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 34px;
+      height: 3px;
+
+      content: '';
+      transition: transform 0.3s ease-out;
+      transform-origin: 0 100%;
+
+      background-color: #fff;
+    }
+
+    &.active {
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      .header__nav-btn-middle {
+        transform: scaleX(0);
+
+        opacity: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    &-wrapper {
+      display: inline-block;
+
+      @media (max-width: 700px) {
+        overflow: hidden;
+
+        width: 40px;
+      }
+    }
+
+    &-img {
+      width: 172px;
+      height: 29px;
+    }
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+
+    align-items: center;
+  }
+
+  &__add-btn {
+    display: flex;
+
+    padding-top: 15px;
+    padding-right: 28px;
+    padding-bottom: 15px;
+    padding-left: 28px;
+
+    color: white;
+    border: solid #2093ee 2px;
+    border-radius: 30px;
+    background-color: transparent;
+
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 820px) {
+      display: none;
+    }
+
+    &-text {
+      margin-right: 25px;
+    }
+
+    &-sign {
+      font-size: 36px;
+      line-height: 0;
+
+      color: #2093ee;
+    }
+  }
+
+  &__form {
+    @media (max-width: 530px) {
+      display: none;
+    }
+
+    &-input::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &-input::-moz-placeholder {
+      color: transparent;
+    }
+
+    &-input:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &-input {
+      overflow: hidden;
+
+      width: 16px;
+      height: 16px;
+      padding: 11px 12px 11px 12px;
+
+      cursor: pointer;
+      transition: all 0.5s;
+
+      color: transparent;
+      border: none;
+      border-radius: 160px;
+      outline: none;
+
+      background: url('../images/magnify-icon.png') no-repeat 6px center;
+
+      &:hover {
+        background-color: #404359;
+      }
+
+      &:focus {
+        width: 130px;
+        padding-left: 42px;
+
+        cursor: auto;
+
+        color: white;
+        border-color: #2196f3;
+        background-color: #224b7a;
+        box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+      }
+    }
+  }
+
+  &__notify-btn {
+    position: relative;
+
+    font-size: 28px;
+
+    color: white;
+
+    font-size: 30px;
+
+    @media (max-width: 530px) {
+      display: none;
+    }
+
+    &_active::after {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: -4px;
+
+      width: 16px;
+      height: 16px;
+
+      content: '';
+
+      border: 3px solid #2f3242;
+      border-radius: 50%;
+      background-color: #2093ee;
+    }
+
+    &-img {
+      display: inline-block;
+      overflow: hidden;
+
+      width: 26px;
+      height: 31px;
+
+      background: url(../images/header-nav-sprite.png) no-repeat;
+      background-position: -0 -287px;
+    }
+  }
+
+  &__profile {
+    &-btn {
+      position: relative;
+
+      display: flex;
+
+      width: 82px;
+      height: 56px;
+
+      justify-content: flex-start;
+      align-items: center;
+
+      &-img {
+        width: 56px;
+        height: 56px;
+
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      &::after {
+        position: absolute;
+        top: 18px;
+        right: 2px;
+
+        width: 10px;
+        height: 10px;
+
+        content: '';
+        transform: rotate(-45deg);
+
+        border-bottom: 2px solid white;
+        border-left: 2px solid white;
+        background: transparent;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-dropdown {
+      position: relative;
+
+      &-container {
+        position: absolute;
+        z-index: 100;
+        top: 65px;
+        right: -20px;
+
+        display: none;
+
+        min-width: 105px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        border-radius: 5px;
+        background-color: #404359;
+
+        @media (max-width: 480px) {
+          border: 2px solid #6f6b6b;
+        }
+
+        &::before {
+          position: absolute;
+          right: 66px;
+          bottom: 100%;
+
+          width: 0;
+          height: 0;
+
+          content: '';
+          pointer-events: none;
+
+          border: solid transparent;
+          border-width: 6px;
+          border-bottom-color: #404359;
+
+          @media (max-width: 480px) {
+            border-bottom-color: #6f6b6b;
+          }
+        }
+      }
+
+      &-option {
+        font-weight: 700;
+
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+
+        color: ghostwhite;
+
+        &:hover {
+          cursor: pointer;
+
+          color: blanchedalmond;
+          background-color: #5886b5;
+        }
+      }
+    }
+  }
+}

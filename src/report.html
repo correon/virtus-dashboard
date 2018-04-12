@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__nav-btn">
+      <div class="header__nav-btn-middle"></div>
+    </div>
+    <div class="header__logo">
+      <a class="header__logo-wrapper" href="#">
+        <img class="header__logo-img" src="images/virtus-logo.png" alt="">
+      </a>
+    </div>
+    <div class="header__buttons-wrapper">
+      <button class="header__add-btn header_margin-right">
+        <span class="header__add-btn-text">Add</span>
+        <span class="header__add-btn-sign">+</span>
+      </button>
+
+      <form class="header__form header_margin-right" id="header-search">
+        <input class="header__form-input" type="search" placeholder="Search">
+      </form>
+
+      <button class="header__notify-btn header__notify-btn_active header_margin-right">
+        <i class="far fa-bell fw"></i>
+      </button>
+
+      <div class="header__profile-dropdown dropdown" data-dropdown="profile">
+        <div class="header__profile-btn dropdown__btn">
+          <div class="header__profile-btn-img">
+            <img src="images/user-pic.png" class="img-responsive" alt="">
+          </div>
+        </div>
+        <ul tabindex="-1" class="header__profile-dropdown-container dropdown__list">
+          <li class="header__profile-dropdown-option">Profile</li>
+          <li class="header__profile-dropdown-option">Edit</li>
+          <li class="header__profile-dropdown-option">Help</li>
+          <li class="header__profile-dropdown-option">Quit</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <nav class="nav">
+      <ul>
+        <li class="nav__item">
+          <a href="home.html" class="nav__icon nav__icon-home">
+            <i class="fas fa-home fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="projects.html" class="nav__icon nav__icon-menu">
+            <i class="fas fa-briefcase fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__icon nav__icon-report nav__icon_active">
+            <i class="fas fa-chart-line fa-fw"></i>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html" class="nav__icon nav__icon-inbox nav__icon-inbox_new">
+            <i class="fas fa-envelope fa-fw"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="report-container">
+      <div class="report-submenu">
+        <div class="report-submenu__stats">
+          <div class="report-submenu__stat">
+            <figure class="report-submenu__stat-chart report-submenu__stat-chart-one animate">
+              <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-background" />
+                <circle class="circle-foreground" />
+              </svg>
+              <figcaption>75%</figcaption>
+            </figure>
+            <div class="report-submenu__stat-data">
+              <span id="views-count" class="report-submenu__stat-number">1 300</span>
+              <span class="report-submenu__stat-label">Views</span>
+            </div>
+          </div>
+
+          <div class="report-submenu__stat">
+            <figure class="report-submenu__stat-chart report-submenu__stat-chart-two animate">
+              <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-background" />
+                <circle class="circle-foreground" />
+              </svg>
+              <figcaption>35%</figcaption>
+            </figure>
+            <div class="report-submenu__stat-data">
+              <span id="views-count" class="report-submenu__stat-number">800</span>
+              <span class="report-submenu__stat-label">Visitors</span>
+            </div>
+          </div>
+
+          <div class="report-submenu__stat">
+            <figure class="report-submenu__stat-chart report-submenu__stat-chart-three animate">
+              <svg role="img" xmlns="http://www.w3.org/2000/svg">
+                <circle class="circle-background" />
+                <circle class="circle-foreground" />
+              </svg>
+              <figcaption>62%</figcaption>
+            </figure>
+            <div class="report-submenu__stat-data">
+              <span id="views-count" class="report-submenu__stat-number">3 800</span>
+              <span class="report-submenu__stat-label">Impressions</span>
+            </div>
+          </div>
+        </div>
+        <div class="submenu__filter report-submenu__filter">
+          <span class="submenu__filter-label">Show:</span>
+          <div class="submenu__filter-container dropdown select" data-dropdown="inbox-filter">
+            <button class="submenu__filter-btn dropdown__btn">
+              Not selected
+            </button>
+            <ul class="submenu__filter-content report-submenu__filter-content dropdown__list">
+              <li class="submenu__filter-option report-submenu__filter-option">Day</li>
+              <li class="submenu__filter-option report-submenu__filter-option">Week</li>
+              <li class="submenu__filter-option report-submenu__filter-option">Month</li>
+              <li class="submenu__filter-option report-submenu__filter-option">Year</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="report-chart">
+        <div class="report-chart__day">
+          <span>Mon</span>
+        </div>
+        <div class="report-chart__day">
+          <span>Tue</span>
+        </div>
+        <div class="report-chart__day report-chart__day_active">
+          <span>Wed</span>
+        </div>
+        <div class="report-chart__day">
+          <span>Thu</span>
+        </div>
+        <div class="report-chart__day">
+          <span>Fri</span>
+        </div>
+        <div class="report-chart__day">
+          <span>Sat</span>
+        </div>
+        <div class="report-chart__day">
+          <span>San</span>
+        </div>
+      </div>
+      <div class="report-table__wr">
+        <table class="report-table__content">
+          <tr class="report-table__header">
+            <th class="report-table__header-item report-table__first-cell">
+              <span class="report-table__header-title report-table__header-title_active">Campaign</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Time</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Views</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Visitors</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Ctr</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Cpc</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Cpv</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Cpm</span>
+            </th>
+            <th class="report-table__header-item">
+              <span class="report-table__header-title">Status</span>
+            </th>
+          </tr>
+          <tr class="report-table__row">
+            <td class="report-table__first-cell">Lorem ipsum dolor sit amet tetur</td>
+            <td>6 days</td>
+            <td>358 000</td>
+            <td>58 200</td>
+            <td>25%</td>
+            <td>$3.02</td>
+            <td>$2.51</td>
+            <td>$28.35</td>
+            <td class="report-table__cell-status report-table__cell-status_active">Active</td>
+          </tr>
+          <tr class="report-table__row">
+            <td class="report-table__first-cell">Sed do eiusmod tempor</td>
+            <td>7 hours</td>
+            <td>1 200</td>
+            <td>800</td>
+            <td>10%</td>
+            <td>$8.45</td>
+            <td>$6.13</td>
+            <td>$45.22</td>
+            <td class="report-table__cell-status">Disable</td>
+          </tr>
+          <tr class="report-table__row">
+            <td class="report-table__first-cell">Consectetur adipisicing elit sed</td>
+            <td>3 days</td>
+            <td>69 000</td>
+            <td>7 300</td>
+            <td>19%</td>
+            <td>$6.22</td>
+            <td>$3.90</td>
+            <td>$37.80</td>
+            <td class="report-table__cell-status report-table__cell-status_active">Active</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
